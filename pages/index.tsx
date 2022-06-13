@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Relog from '../components/Relog'
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div>
       <Head>
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
       </Head>
       <div>
         <h2>box</h2>
+        <Relog />
       </div>
     </div>
   )
