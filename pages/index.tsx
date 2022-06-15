@@ -1,8 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Relog from '../components/Relog'
+import Image from 'next/image'
+import { useSelector } from 'react-redux'
+import { RootState } from '../components/redux/store'
 
-const Home = () => {
+const Home: NextPage = () => {
+  const count = useSelector((state: RootState) => state.counter.value)
   return (
     <div>
       <Head>
@@ -12,7 +15,7 @@ const Home = () => {
       </Head>
       <div>
         <h2>box</h2>
-        <Relog />
+        <h2>{count}</h2>
       </div>
     </div>
   )
